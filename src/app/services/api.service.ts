@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  baseUrl = 'http://thesis-backend-sa.herokuapp.com';
+  baseUrl = 'https://thesis-backend-sa.herokuapp.com';
   postData = {
     example: 'Mala idea',
     sentiment: 0
