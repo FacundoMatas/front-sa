@@ -18,7 +18,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot( ROUTES, { useHash: true } )
+    RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
