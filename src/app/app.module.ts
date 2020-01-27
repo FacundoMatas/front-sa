@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/Router';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -17,8 +16,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
