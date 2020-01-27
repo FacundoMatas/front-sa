@@ -8,7 +8,7 @@ export class ApiService {
 
   baseUrl = 'https://thesis-backend-sa.herokuapp.com';
   postData = {
-    example: 'Mala idea',
+    text: 'Mala idea',
     sentiment: 0
   };
 
