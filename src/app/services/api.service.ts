@@ -6,19 +6,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  baseUrl = 'https://thesis-backend-sa.herokuapp.com';
-  postData = {
-    text: 'Mala idea',
-    sentiment: 0
-  };
+  baseUrl = 'https://thesis-backend-sa.herokuapp.com';  
+  sentiment: any;
+  postData: any;
 
   constructor(private http: HttpClient) { }
 
-  predictExample(){
-    return this.http.post(this.baseUrl, this.postData)
-    .toPromise().then(data => {
-      console.log(data);
-    });
+  predictExample(example: string){
+    this.postData = {
+      text: example,
+      sentiment: 99
+    };
+
+    console.log(this.postData);
+
+    return this.http.post(this.baseUrl, this.postData);
 
   }
 }

@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Texto</span>
+    </div>
+    <input [(ngModel)]="example" type="text" class="form-control" placeholder="Texto" aria-label="Texto" aria-describedby="basic-addon1">
+</div>
+
+<button type="button" class="btn btn-dark" (click)="predict()">Success</button>
+<app-loading *ngIf="loading"></app-loading>
+<div *ngIf="positiveResponse" class="alert alert-success m-5 animated fadeIn" role="alert">
+    Resultado: {{ sentiment }}
+</div>
+<div *ngIf="negativeResponse" class="alert alert-danger m-5 animated fadeIn" role="alert">
+    Resultado: {{ sentiment }}
+</div>
