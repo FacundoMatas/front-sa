@@ -11,6 +11,7 @@ import { ROUTES } from './app.routes';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { LinksComponent } from './components/links/links.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LinksComponent } from './components/links/links.component';
     HomeComponent,
     NavbarComponent,
     LoadingComponent,
-    LinksComponent
+    LinksComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
