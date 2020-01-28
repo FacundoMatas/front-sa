@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -9,17 +10,20 @@ import { HomeComponent } from './components/home/home.component';
 import { ROUTES } from './app.routes';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { LinksComponent } from './components/links/links.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    LoadingComponent
+    LoadingComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule.forRoot( ROUTES, { useHash: true } ),
     FormsModule
   ],
   providers: [],

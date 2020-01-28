@@ -24,6 +24,7 @@ export class HomeComponent  {
     this.loading = true;
     this.positiveResponse = false;
     this.negativeResponse = false;
+    this.sentiment = '';
     this.api.predictExample(this.example).toPromise().then( (data: any) => {
       if(data.results.results === 0){
         this.negativeResponse = true;
@@ -37,6 +38,8 @@ export class HomeComponent  {
     }).catch(
       (error: any) => {
         console.log(error);
+        this.sentiment = 'Error al obtener la respuesta';
+        this.negativeResponse = true;
         this.loading = false;
       }
     );
