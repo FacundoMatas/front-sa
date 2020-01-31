@@ -18,8 +18,6 @@ export class ApiService {
       sentiment: 99
     };
 
-    console.log(this.postData);
-
     return this.http.post(this.baseUrl, this.postData);
 
   }

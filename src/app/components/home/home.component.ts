@@ -11,9 +11,10 @@ export class HomeComponent  {
 
   example: string;
   loading: boolean;
-  sentiment: any;
+  sentiment: string;
   positiveResponse: boolean;
   negativeResponse: boolean;
+  probability: number;
 
   constructor( private api: ApiService ) {
     this.positiveResponse = false;
@@ -33,7 +34,9 @@ export class HomeComponent  {
         this.positiveResponse = true;
         this.sentiment = 'Positivo';
       }
+      this.probability = Number((data.results.probablity * 100).toFixed(2));
       this.loading = false;
+      this.sentiment = this.sentiment.concat( ' - %' ).concat(this.probability.toString());
       console.log(this.sentiment);
     }).catch(
       (error: any) => {
